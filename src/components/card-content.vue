@@ -14,8 +14,10 @@ export default {
       type: Number,
       default: () => 1
     },
-    isMultiple: function () {
+    computed: {
+      isMultiple: function () {
         return this.quantity > 1;
+      }
     }
   }
 };
