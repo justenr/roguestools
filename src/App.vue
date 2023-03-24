@@ -1,19 +1,18 @@
-<template>
-  <div>
-    <h1>Rogues Tools</h1>
-    {{ message }}
-    User ID: {{ user }}
-  </div>
-</template>
-
 <script>
+import HeaderBar from '@/components/header-bar.vue';
+import NavBar from '@/components/nav-bar.vue';
+
 export default {
-  name: "App",
+  name: 'App',
   data() {
     return {
       message: "",
       user: ""
     };
+  },
+  components: {
+    HeaderBar,
+    NavBar,
   },
   methods: {
     getUserInfo: async() => {
@@ -31,6 +30,22 @@ export default {
   }
 };
 </script>
+
+<template>
+  <div id="app">
+    <HeaderBar />
+    <div class="section columns">
+      <NavBar />
+      <main class="column">
+        <router-view />
+      </main>
+    </div>
+  </div>
+</template>
+
+<style lang="scss">
+@import 'styles.scss';
+</style>
 
 
 
