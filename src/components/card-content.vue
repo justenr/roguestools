@@ -13,13 +13,13 @@ export default {
     quantity: {
       type: Number,
       default: () => 1
-    },
-    computed: {
+    }
+  },
+  computed: {
       isMultiple: function () {
         return this.quantity > 1;
       }
     }
-  }
 };
 </script>
 
