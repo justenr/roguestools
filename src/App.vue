@@ -2,7 +2,7 @@
   <div>
     <h1>Rogues Tools</h1>
     {{ message }}
-    {{  }}
+    User ID: {{ user }}
   </div>
 </template>
 
@@ -19,19 +19,21 @@ export default {
     getUserInfo: async() => {
       const response = await fetch('/.auth/me');
       const payload = await response.json();
-      const { clientPrincipal } = payload;
+      const clientPrincipal = payload;
       return clientPrincipal;
     }
   },
   async mounted() {
-    const { text } = await (await fetch("/api/message")).json();
+    const text = await (await fetch("/api/message")).json();
     this.message = text;
-    const { authResult } = await (this.getUserInfo());
-    this.user = authResult;
+    const authResult = await (this.getUserInfo());
     console.log(authResult);
+    console.log(authResult.userDetails);
+    this.user = authResult.userId;
   }
 };
 </script>
+
 
 
 
