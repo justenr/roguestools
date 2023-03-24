@@ -24,7 +24,7 @@ export default {
 <template>
   <div class="card-content">
     <div class="content">
-      <div class="name">{{ name }} <span v-if="isMultiple">{{ quantity }}</span></div>
+      <div class="name">{{ name }} <span v-show="isMultiple"> ({{ quantity }})</span></div>
       <div class="description">{{ description }}</div>
     </div>
   </div>
