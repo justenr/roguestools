@@ -28,8 +28,8 @@ export default {
     this.message = text;
     const authResult = await (this.getUserInfo());
     console.log(authResult);
-    console.log(authResult.userDetails);
-    this.user = authResult.userId;
+    console.log(authResult.clientPrincipal.userDetails);
+    this.user = authResult.clientPrincipal.userId;
   }
 };
 </script>
