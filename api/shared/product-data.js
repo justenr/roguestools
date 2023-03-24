@@ -4,7 +4,7 @@ const data = {
       id: 10,
       name: 'Vial of poison',
       description: '7d6 poison damage, DC 15 Con save, half damage on success',
-      quantity: '7',
+      quantity: 7,
     },
     {
       id: 20,
@@ -17,12 +17,6 @@ const data = {
       name: 'Platinum arm band',
       description: '10 Gold each',
       quantity: 1,
-    },
-    {
-      id: 40,
-      name: 'Vial of poison',
-      description: '7d6 poison damage, DC 15 Con save, half damage on success',
-      quantity: '7',
     },
     {
       id: 50,
