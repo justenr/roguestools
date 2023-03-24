@@ -24,12 +24,10 @@ export default {
     }
   },
   async mounted() {
-    const text = await (await fetch("/api/message")).json();
+    const { text } = await (await fetch("/api/message")).json();
     this.message = text;
-    const authResult = await (this.getUserInfo());
-    console.log(authResult);
-    console.log(authResult.clientPrincipal.userDetails);
-    this.user = authResult.clientPrincipal.userId;
+    const { clientPrincipal } = await (this.getUserInfo());
+    this.user = clientPrincipal.userId;
   }
 };
 </script>
