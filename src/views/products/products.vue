@@ -1,7 +1,7 @@
 <script>
 import { mapActions, mapGetters } from 'vuex';
 import ListHeader from '@/components/list-header.vue';
-import Modal from '@/components/modal.vue';
+import ModalItem from '@/components/modal-item.vue';
 import ProductDetail from './product-detail.vue';
 import ProductList from './product-list.vue';
 
@@ -23,7 +23,7 @@ export default {
     ListHeader,
     ProductList,
     ProductDetail,
-    Modal,
+    ModalItem,
   },
   created() {
     this.getProductsAction();
@@ -109,12 +109,12 @@ export default {
       </div>
     </div>
 
-    <Modal
+    <ModalItem
       class="modal-product"
       :message="message"
       :isOpen="showModal"
       @handleNo="closeModal"
       @handleYes="deleteProduct"
-    ></Modal>
+    ></ModalItem>
   </div>
 </template>
