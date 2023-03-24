@@ -42,6 +42,7 @@ export default {
           <CardContent
             :name="product.name"
             :description="product.description"
+            :quantity="product.quantity"
           />
           <footer class="card-footer">
             <ButtonFooter

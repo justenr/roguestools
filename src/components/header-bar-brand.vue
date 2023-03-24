@@ -15,9 +15,9 @@ export default {
       <i class="fab js-logo fa-vuejs fa-2x" aria-hidden="true" />
     </a>
     <router-link to="/" class="navbar-item nav-home">
-      <span class="brand-first">7's Deadly Sins </span>
-      <span class="brand-second">PARTY </span>
-      <span class="brand-third">STASH</span>
+      <span class="brand-first">PARTY</span>
+      <span class="brand-second">STASH</span>
+      <span class="brand-third">7's Deadly Sins</span>
     </router-link>
   </div>
 </template>
