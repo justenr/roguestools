@@ -1,6 +1,6 @@
 <script>
 export default {
-  name: 'Modal',
+  name: 'ModalItem',
   props: {
     message: {
       type: String,
